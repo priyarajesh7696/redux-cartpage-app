@@ -1,0 +1,127 @@
+@media (min-width: 1025px) {
+    .h-custom {
+    height: 100vh !important;
+    }
+    }
+    
+    .number-input input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+    }
+    
+    .number-input input[type=number]::-webkit-inner-spin-Button,
+    .number-input input[type=number]::-webkit-outer-spin-Button {
+    -webkit-appearance: none;
+    }
+    
+    .number-input Button {
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+    }
+    
+    .number-input Button:before,
+    .number-input Button:after {
+    display: inline-block;
+    position: absolute;
+    content: '';
+    height: 2px;
+    transform: translate(-50%, -50%);
+    }
+    
+    .number-input Button.plus:after {
+    transform: translate(-50%, -50%) rotate(90deg);
+    }
+    
+    .number-input input[type=number] {
+    text-align: center;
+    }
+    
+    .number-input.number-input {
+    border: 1px solid #ced4da;
+    width: 10rem;
+    border-radius: .25rem;
+    }
+    
+    .number-input.number-input Button {
+    width: 2.6rem;
+    height: .7rem;
+    }
+    
+    .number-input.number-input Button.minus {
+    padding-left: 10px;
+    }
+    
+    .number-input.number-input Button:before,
+    .number-input.number-input Button:after {
+    width: .7rem;
+    background-color: #495057;
+    }
+    
+    .number-input.number-input input[type=number] {
+    max-width: 4rem;
+    padding: .5rem;
+    border: 1px solid #ced4da;
+    border-width: 0 1px;
+    font-size: 1rem;
+    height: 2rem;
+    color: #495057;
+    }
+    
+    @media not all and (min-resolution:.001dpcm) {
+    @supports (-webkit-appearance: none) and (stroke-color:transparent) {
+    
+    .number-input.def-number-input.safari_only Button:before,
+    .number-input.def-number-input.safari_only Button:after {
+    margin-top: -.3rem;
+    }
+    }
+    }
+    
+    .shopping-cart .def-number-input.number-input {
+    border: none;
+    }
+    
+    .shopping-cart .def-number-input.number-input input[type=number] {
+    max-width: 4rem;
+    border: 2px solid blue;
+    }
+    
+    .shopping-cart .def-number-input.number-input input[type=number].black-text,
+    .shopping-cart .def-number-input.number-input input.btn.btn-link[type=number],
+    .shopping-cart .def-number-input.number-input input.md-toast-close-Button[type=number]:hover,
+    .shopping-cart .def-number-input.number-input input.md-toast-close-Button[type=number]:focus {
+    color: #212529 !important;
+    }
+    
+    .shopping-cart .def-number-input.number-input Button {
+    width: 1rem;
+    }
+    
+    .shopping-cart .def-number-input.number-input Button:before,
+    .shopping-cart .def-number-input.number-input Button:after {
+    width: .5rem;
+    }
+    
+    .shopping-cart .def-number-input.number-input Button.minus:before,
+    .shopping-cart .def-number-input.number-input Button.minus:after {
+    background-color: #4285f4;
+    }
+    
+    .shopping-cart .def-number-input.number-input Button.plus:before,
+    .shopping-cart .def-number-input.number-input Button.plus:after {
+    background-color: #4285f4;
+    }
+    .total{
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+      padding: 20px;
+      width: 100%;
+      /* margin-left: 300px; */
+    }
