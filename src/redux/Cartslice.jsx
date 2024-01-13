@@ -12,15 +12,16 @@ export const Cartslice = createSlice({
     initialState:[],
     reducers:{
         saveCarts:(state,action)=>{
-            console.log(state,action)
+            // console.log(state,action)
             return action.payload
         },
         CartIncrement:(state,action)=>{
-            let index = findIndex(state,id)
+            console.log(action.payload)
 
             return action.payload
         },
         CartDecrement:(state,action)=>{
+            // console.log(state,action)
             return action.payload
         }
         // deleteBlog:(state,action)=>{

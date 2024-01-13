@@ -18,7 +18,7 @@ import {
 function Cartpage() {
   let dispatch = useDispatch();
   let carts = useSelector((state) => state.carts);
-  console.log(carts);
+ 
 
   const getCarts = async () => {
     try {
@@ -47,7 +47,8 @@ function Cartpage() {
                 {carts.map((e, i) => {
                   return <Cards e={e} key={i} />;
                 })}
-                <Button className="bg-primary"style={{ width:"100%" } }>CHECKOUT</Button>
+                 <Button className="bg-danger"style={{ width:"95%", margin:"10px" } }>REMOVE</Button>
+                <Button className="bg-primary"style={{ width:"95%", margin:"10px" } }>CHECKOUT</Button>
               </CardBody>
             </Card>
           </Col>

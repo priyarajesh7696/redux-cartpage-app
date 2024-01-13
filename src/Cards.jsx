@@ -1,24 +1,42 @@
 import React,{useState} from "react";
 import { Button,CardImg } from "react-bootstrap";
+import { useSelector, useDispatch } from "react-redux";
+import { saveCarts, CartIncrement, CartDecrement } from "./redux/Cartslice";
+import { toast } from "react-toastify";
 
-function Cards({e}) {  
+function Cards({e}) {
+   
   
-  let [count,setCount]=useState(1)
+   let [count,setCount]=useState(1)
   
-  let [total,setTotal]=useState(e.price)
+   let [total,setTotal]=useState(e.price)
  
 const countDecrease=()=>
 {
-
-       setCount(count-1)
-       setTotal(e.price*count)
+    try{
+        // dispatch(CartDecrement(count,e.price));
+        setCount(count-1)
+        setTotal(e.price*count)
+    }
+    catch (error) {
+        toast.error("Internal Server Error");
+    }
+   
       
      
 }
   const countIncrease=()=>{
+    try{
+        // dispatch(CartIncrement(e.price));
+        setCount(count+1)
+        setTotal(e.price*count)
+    }
+    catch (error) {
+        toast.error("Internal Server Error");
+    }
     
-    setCount(count+1);
-    setTotal(e.price*count)
+    // setCount(count+1);
+    // setTotal(e.price*count)
  
  
    
